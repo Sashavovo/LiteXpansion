@@ -57,7 +57,7 @@ public class ScrapMachine extends SlimefunItem implements InventoryBlock, Energy
     }
 
     private void setupInv() {
-        createPreset(this, "&8Scrap Machine", blockMenuPreset -> {
+        createPreset(this, "&8Мультисырьевая Машина", blockMenuPreset -> {
             for (int i = 0; i < 27; i++)
                 blockMenuPreset.addItem(i, ChestMenuUtils.getBackground(), ChestMenuUtils.getEmptyClickHandler());
 
@@ -66,7 +66,7 @@ public class ScrapMachine extends SlimefunItem implements InventoryBlock, Energy
                 cursor == null || cursor.getType() == Material.AIR
             );
 
-            blockMenuPreset.addItem(PROGRESS_SLOT, new CustomItem(Material.DEAD_BUSH, "&7Progress"));
+            blockMenuPreset.addItem(PROGRESS_SLOT, new CustomItem(Material.DEAD_BUSH, "&7Процесс"));
         });
     }
 

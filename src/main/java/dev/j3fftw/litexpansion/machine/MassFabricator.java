@@ -46,7 +46,7 @@ public class MassFabricator extends SlimefunItem implements InventoryBlock, Ener
 
     private static final Map<BlockPosition, Integer> progress = new HashMap<>();
 
-    private static final CustomItem progressItem = new CustomItem(Items.UU_MATTER.getType(), "&7Progress");
+    private static final CustomItem progressItem = new CustomItem(Items.UU_MATTER.getType(), "&7Процесс");
 
     public MassFabricator() {
         super(Items.LITEXPANSION, Items.MASS_FABRICATOR_MACHINE, RecipeType.ENHANCED_CRAFTING_TABLE, new ItemStack[] {
@@ -58,7 +58,7 @@ public class MassFabricator extends SlimefunItem implements InventoryBlock, Ener
     }
 
     private void setupInv() {
-        createPreset(this, "&5Mass Fabricator", blockMenuPreset -> {
+        createPreset(this, "&5Генератор Материи", blockMenuPreset -> {
             for (int i = 0; i < 27; i++)
                 blockMenuPreset.addItem(i, ChestMenuUtils.getBackground(), ChestMenuUtils.getEmptyClickHandler());
 

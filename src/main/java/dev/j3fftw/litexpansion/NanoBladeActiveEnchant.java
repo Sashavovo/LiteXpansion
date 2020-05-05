@@ -13,7 +13,7 @@ public class NanoBladeActiveEnchant extends Enchantment {
     }
 
     public String getName() {
-        return "Active";
+        return "Активный";
     }
 
     @Override

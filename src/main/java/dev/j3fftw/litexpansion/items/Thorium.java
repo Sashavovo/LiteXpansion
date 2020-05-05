@@ -10,8 +10,8 @@ import org.bukkit.inventory.ItemStack;
 
 public class Thorium extends RadioactiveItem {
 
-    private static final ItemStack thorium = new CustomItem(Material.PAPER, "&fHint!",
-        "&a&oMake sure to first GEO-Scan the chunk in which you are", "&a&omining to discover Thorium!");
+    private static final ItemStack thorium = new CustomItem(Material.PAPER, "&fСовет!",
+        "&a&oОбязательно сначала GEO-Scan чанк, в котором вы находитесь", "&a&o!");
 
     public Thorium() {
         super(Items.LITEXPANSION, Radioactivity.HIGH, Items.THORIUM, RecipeType.GEO_MINER, new ItemStack[] {

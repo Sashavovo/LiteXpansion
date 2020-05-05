@@ -57,7 +57,7 @@ public class LiteXpansion extends JavaPlugin implements SlimefunAddon {
         new FoodSynthesizer().register(this);
         new MagThor().register(this);
         new Thorium().register(this);
-        registerItem(Items.SCRAP, ScrapMachine.RECIPE_TYPE, new CustomItem(Material.COBBLESTONE, "&7Any Item!"));
+        registerItem(Items.SCRAP, ScrapMachine.RECIPE_TYPE, new CustomItem(Material.COBBLESTONE, "&7Ë‏במי ןנוהלוע!"));
         registerItem(Items.UU_MATTER, MassFabricator.RECIPE_TYPE, Items.SCRAP);
         registerItem(Items.REFINED_IRON, RecipeType.SMELTERY, new ItemStack(Material.IRON_INGOT));
         registerItem(Items.MACHINE_BLOCK, RecipeType.ENHANCED_CRAFTING_TABLE,
@@ -120,6 +120,7 @@ public class LiteXpansion extends JavaPlugin implements SlimefunAddon {
                 if (i == 4) continue;
                 final ItemStack[] recipe2 = new ItemStack[9];
                 recipe2[i] = items[0];
+                Arrays.fill(recipe2, null);
                 type.register(recipe2, result);
             }
 
@@ -129,6 +130,7 @@ public class LiteXpansion extends JavaPlugin implements SlimefunAddon {
         if (items.length < 9) {
             recipe = new ItemStack[9];
             System.arraycopy(items, 0, recipe, 0, items.length);
+            Arrays.fill(recipe, null);
         } else
             recipe = items;
 
@@ -155,6 +157,7 @@ public class LiteXpansion extends JavaPlugin implements SlimefunAddon {
         for (int i = 0; i < 9; i++) {
             final ItemStack[] recipe = new ItemStack[9];
             recipe[i] = item;
+            Arrays.fill(recipe, null);
             RecipeType.ENHANCED_CRAFTING_TABLE.register(recipe, result);
         }
     }
